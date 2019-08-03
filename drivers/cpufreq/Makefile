@@ -21,7 +21,7 @@ obj-$(CONFIG_CPU_BOOST)			+= cpu-boost.o
 obj-$(CONFIG_DSBOOST)			+= dsboost.o
 obj-$(CONFIG_CPU_FREQ_GOV_DARKNESSV5)   += cpufreq_darknessv5.o
 obj-$(CONFIG_CPUFREQ_DT)		+= cpufreq-dt.o
-
+obj-$(CONFIG_CPU_FREQ_GOV_WAVE)		+= cpufreq_wave.o
 ##################################################################################
 # x86 drivers.
 # Link order matters. K8 is preferred to ACPI because of firmware bugs in early

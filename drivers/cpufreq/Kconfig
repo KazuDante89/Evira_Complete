@@ -74,7 +74,10 @@ config CPU_FREQ_DEFAULT_GOV_PERFORMANCE
 	  Use the CPUFreq governor 'performance' as default. This sets
 	  the frequency statically to the highest frequency supported by
 	  the CPU.
-
+config CPU_FREQ_DEFAULT_GOV_WAVE
+	bool "wave"
+	select CPU_FREQ_GOV_WAVE
+	help
 config CPU_FREQ_DEFAULT_GOV_POWERSAVE
 	bool "powersave"
 	select CPU_FREQ_GOV_POWERSAVE
@@ -183,7 +186,9 @@ config CPU_FREQ_DEFAULT_GOV_BLU_SCHEDUTIL
 	  If in doubt, say N.
 
 endchoice
-
+config CPU_FREQ_GOV_WAVE
+	tristate "'wave' cpufreq governor"
+	depends on CPU_FREQ
 config CPU_FREQ_GOV_PERFORMANCE
 	tristate "'performance' governor"
 	help
